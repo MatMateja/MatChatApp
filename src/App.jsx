@@ -1,6 +1,6 @@
 // prema: scaledrone tutorial 2018: https://github.com/ScaleDrone/react-chat-tutorial/blob/master/src/App.js
 
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Messages from './components/Messages';
 import Input from './components/Input';
@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 
 
-//user component:
+//Creating user
 const randomName = () => {
   const adjectives = [
     "autumn", "hidden", "bitter", "misty", "silent", "empty", "dry", "dark",
@@ -39,7 +39,7 @@ const randomName = () => {
   return adjective + noun;
 }
 
-const randomColor =() =>{
+const randomColor = () => {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
@@ -49,14 +49,14 @@ const App = () => {
   const [messages, setMessages] = useState([]);
   const [member, setMember] = useState({
     username: randomName(),
-    color: randomColor(), 
+    color: randomColor(),
   });
   const [drone, setDrone] = useState(null);
 
   useEffect(() => {
     const drone = new window.Scaledrone("LWiQ0FNiVMhXnBu0", {
       data: member,
-    });  
+    });
 
     setDrone(drone);
   }, []);
@@ -65,16 +65,16 @@ const App = () => {
     if (drone) {
       const room = drone.subscribe("observable-room");
 
-  drone.on("open", (error) => {
-    if (error) {
-      console.error(error);
-    } else {
-      setMember(prevMember => ({
-        ...prevMember,
-        id: drone.clientId
-      }));
-    }
-  });
+      drone.on("open", (error) => {
+        if (error) {
+          console.error(error);
+        } else {
+          setMember(prevMember => ({
+            ...prevMember,
+            id: drone.clientId
+          }));
+        }
+      });
 
       room.on("data", (message, member) => {
         setMessages(prevMessages => [...prevMessages, { text: message, member: member }]);
@@ -86,19 +86,19 @@ const App = () => {
     drone.publish({
       room: "observable-room",
       message
-    })
+    });
   }
 
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <div className='Messages-wrapper'>
-      <Messages messages={messages} currentMember={member} />
+        <Messages messages={messages} currentMember={member} />
       </div>
-      <Input onSendMessage={onSendMessage}/>
-      <Footer/>
+      <Input onSendMessage={onSendMessage} />
+      <Footer />
     </div>
-    
+
   );
 };
 

@@ -16,10 +16,12 @@ const Messages = ({ currentMember, messages }) => {
       <li key={currentMember.id} className={className}>
         <div className="Message-content">
           <div className="Message-user">
-            <div className="color" style={{backgroundColor:member.clientData.color
-              }}></div>
-            <div className="username" style={{color:member.clientData.color
-              }}>{member.clientData.username}</div>
+            <div className="color" style={{
+              backgroundColor: member.clientData.color
+            }}></div>
+            <div className="username" style={{
+              color: member.clientData.color
+            }}>{member.clientData.username}</div>
           </div>
           <div className="text">{text}</div>
         </div>

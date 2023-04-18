@@ -1,6 +1,7 @@
 body {
-  background-color:whitesmoke ;
+  background-color: whitesmoke;
 }
+
 .App {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,7 @@ body {
   max-width: 900px;
   margin: 0 auto;
 }
+
 /* HEADER */
 .App-header {
   display: inline-block;
@@ -18,11 +20,12 @@ body {
   text-align: center;
   color: white;
   border-radius: 8px;
- 
+
 }
+
 h1 {
-display: inline-block;
-margin-left: 15px;
+  display: inline-block;
+  margin-left: 15px;
 }
 
 .My-icon {
@@ -32,7 +35,7 @@ margin-left: 15px;
 
 /* MESSAGES WINDOW */
 .Messages-wrapper {
- box-sizing: border-box;
+  box-sizing: border-box;
   height: 80%;
   width: 900px;
   margin: 0 auto;
@@ -43,10 +46,11 @@ margin-left: 15px;
   flex-direction: column-reverse;
   /* linear gradient samo za Antu :) */
   background:
-        linear-gradient(360deg, rgba(255, 255, 254, 0.95), rgba(255, 255, 254, 0.95)),
-        url('../public/imgs/background.JPG'), center/cover no-repeat; 
- 
+    linear-gradient(360deg, rgba(255, 255, 254, 0.95), rgba(255, 255, 254, 0.95)),
+    url('../public/imgs/background.JPG'), center/cover no-repeat;
+
 }
+
 /* MESSAGES COMPONENT */
 .Messages-list {
   padding: 20px 0;
@@ -74,7 +78,7 @@ margin-left: 15px;
   display: inline-block;
 }
 
-.currentMember > .Message-content {
+.currentMember>.Message-content {
   align-items: flex-end;
 }
 
@@ -85,6 +89,7 @@ margin-left: 15px;
   align-items: center;
   padding-bottom: 8px;
 }
+
 .color {
   height: 14px;
   width: 14px;
@@ -102,9 +107,9 @@ margin-left: 15px;
   overflow-wrap: break-word;
   text-align: left;
   box-shadow: -5px 5px #25756d;
-} 
+}
 
-.currentMember > .Message-content .text {
+.currentMember>.Message-content .text {
   background-color: #21978B;
   box-shadow: -5px 5px #25756d;
 }
@@ -119,8 +124,8 @@ form {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
-border-top-right-radius: 8px;
- border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
 }
 
 input {
@@ -131,13 +136,13 @@ input {
   flex-grow: 1;
   border: none;
 }
+
 button {
   padding: 5px 10px;
   font-size: 16px;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   ;
   color: #21978B;
-  /* box-shadow: -5px 5px #25756d; */
   border: none;
   border-radius: 8px;
   margin-left: 10px;
@@ -148,11 +153,11 @@ button:disabled {
   color: whitesmoke;
 }
 
- /* APP FOOTER */
+/* APP FOOTER */
 .App-footer {
   background-color: #21978B;
   overflow: visible;
-  width: 100%; 
+  width: 100%;
   height: 30px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
