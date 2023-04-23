@@ -1,7 +1,6 @@
 //prema: scaledrone tutorial 2018: https://github.com/ScaleDrone/react-chat-tutorial/blob/master/src/Input.js
 
-import React, { useState } from "react";
-
+import { useState } from "react";
 
 const Input = (props) => {
 
@@ -9,16 +8,13 @@ const Input = (props) => {
 
   const onChange = (e) => {
     setText(e.target.value);
-
   }
 
   const onSubmit = (e) => {
     e.preventDefault();
     setText('');
     props.onSendMessage(text);
-
   }
-
 
   return (
     <div className="Input">
@@ -33,9 +29,7 @@ const Input = (props) => {
         <button disabled={text === "" ? true : false}>Send</button>
       </form>
     </div>
-
-  )
-
+  );
 }
 
 export default Input;

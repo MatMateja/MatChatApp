@@ -1,8 +1,6 @@
-import React from "react";
 import myIcon from '../images/chat-bubbles.png';
 
 const Header = () => {
-
     return (
         <>
             <div className="App-header">
@@ -11,9 +9,6 @@ const Header = () => {
             </div>
         </>
     );
-
-
-
 };
 
 export default Header;

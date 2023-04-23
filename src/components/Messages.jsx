@@ -1,6 +1,4 @@
 //prema: scaledrone tutorial 2018: https://github.com/ScaleDrone/react-chat-tutorial/blob/master/src/Messages.js
-import React from "react";
-
 
 const Messages = ({ currentMember, messages }) => {
 

@@ -1,14 +1,11 @@
 // prema: scaledrone tutorial 2018: https://github.com/ScaleDrone/react-chat-tutorial/blob/master/src/App.js
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Messages from './components/Messages';
 import Input from './components/Input';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
-
-
 
 //Creating user
 const randomName = () => {
@@ -101,6 +98,5 @@ const App = () => {
 
   );
 };
-
 
 export default App;
