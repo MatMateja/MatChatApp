@@ -44,7 +44,6 @@ h1 {
   overflow: auto;
   display: flex;
   flex-direction: column-reverse;
-  /* linear gradient samo za Antu :) */
   background:
     linear-gradient(360deg, rgba(255, 255, 254, 0.95), rgba(255, 255, 254, 0.95)),
     url('../public/imgs/background.JPG'), center/cover no-repeat;
